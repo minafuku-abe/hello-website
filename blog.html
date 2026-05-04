@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ - 自然に還る庭づくり</title>
+  <meta name="description" content="雑木の庭で実践する庭仕舞いの記録。季節ごとの作業や気づきをつづるブログです。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #5a6f4d;
+      --color-secondary: #8b7355;
+      --color-accent: #9aaa8e;
+      --color-earth: #a89079;
+      --color-forest: #3d4a34;
+      --color-sand: #d4c4b0;
+      --color-moss: #7a9161;
+      --color-stone: #8a8378;
+      --color-text-primary: #2d3319;
+      --color-text-secondary: #5a5a4a;
+      --color-text-light: #f5f5f0;
+      --color-bg-light: #faf9f5;
+      --color-bg-white: #ffffff;
+      --color-bg-dark: #3d4a34;
+      --font-sans: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+      --font-serif: 'Noto Serif JP', serif;
+    }
+  </style>
+
+  <style>
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text-primary);
+      font-size: 121%;
+      line-height: 1.65;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+    }
+    #main-nav {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .nav-link {
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-bg-light">
+
+  <!-- ナビゲーション -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-bg-light/95 shadow-sm backdrop-filter backdrop-blur-sm" aria-label="メインナビゲーション">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-xl lg:text-2xl font-serif font-bold nav-link text-forest">
+            自然に還る庭づくり
+          </a>
+        </div>
+
+        <div class="hidden lg:flex space-x-8">
+          <a href="index.html#hero" class="nav-link text-primary hover:opacity-70 transition">ホーム</a>
+          <a href="index.html#concept" class="nav-link text-primary hover:opacity-70 transition">庭仕舞いとは</a>
+          <a href="index.html#profile" class="nav-link text-primary hover:opacity-70 transition">プロフィール</a>
+          <a href="index.html#story" class="nav-link text-primary hover:opacity-70 transition">庭の物語</a>
+          <a href="index.html#practice" class="nav-link text-primary hover:opacity-70 transition">実践例</a>
+          <a href="index.html#seasons" class="nav-link text-primary hover:opacity-70 transition">四季の庭</a>
+          <a href="blog.html" class="nav-link text-primary font-bold border-b-2 border-primary pb-0.5">ブログ</a>
+        </div>
+
+        <button id="mobile-menu-button"
+                class="lg:hidden p-2"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                aria-label="メニューを開く">
+          <i data-lucide="menu" class="w-6 h-6 text-primary"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg" role="navigation">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html#hero" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">ホーム</a>
+        <a href="index.html#concept" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭仕舞いとは</a>
+        <a href="index.html#profile" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">プロフィール</a>
+        <a href="index.html#story" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭の物語</a>
+        <a href="index.html#practice" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">実践例</a>
+        <a href="index.html#seasons" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">四季の庭</a>
+        <a href="blog.html" class="block text-primary font-bold bg-sand/30 px-4 py-2 rounded transition">ブログ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- ページヘッダー -->
+    <section class="bg-forest text-white py-16 md:py-24 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <img src="assets/images/IMG_3744.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+      </div>
+      <div class="relative z-10 container mx-auto px-4 lg:px-8 text-center">
+        <p class="text-accent text-sm uppercase tracking-widest mb-3 font-sans" data-aos="fade-up">Garden Journal</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up" data-aos-delay="100">ブログ</h1>
+        <p class="text-white/80 text-lg max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          雑木の庭で実践する庭仕舞いの記録。<br>季節ごとの作業や気づきをつづります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 記事一覧 -->
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+
+        <div class="space-y-10">
+
+          <!-- 記事カード: 11月の作業〜落葉樹の剪定 -->
+          <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition-shadow duration-300"
+                   data-aos="fade-up">
+            <a href="blog-november-pruning.html" class="block md:w-72 flex-shrink-0">
+              <img src="assets/images/IMG_3741.jpg"
+                   alt="落葉樹の剪定"
+                   class="w-full h-56 md:h-full object-cover"
+                   loading="lazy">
+            </a>
+            <div class="p-6 md:p-8 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs text-white bg-primary rounded-full px-3 py-1 font-sans">剪定</span>
+                  <time class="text-sm text-text-secondary" datetime="2024-11-15">2024年11月15日</time>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-3 text-forest leading-snug">
+                  <a href="blog-november-pruning.html" class="hover:text-primary transition-colors">
+                    11月の作業〜落葉樹の剪定
+                  </a>
+                </h2>
+                <p class="text-text-secondary leading-relaxed line-clamp-3">
+                  葉が落ちたこの時期は、樹形を確認しながら剪定するのにちょうどよい季節です。
+                  コナラ、ヤマモミジ、ムラサキシキブ……それぞれの木の個性に合わせた剪定の考え方と、
+                  今年の作業記録をまとめました。
+                </p>
+              </div>
+              <div class="mt-5">
+                <a href="blog-november-pruning.html"
+                   class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all duration-200">
+                  続きを読む
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- 今後の記事予告（プレースホルダー） -->
+        <p class="text-center text-text-secondary mt-16 text-base" data-aos="fade-up">
+          これから少しずつ記事を増やしていきます。
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-forest text-white py-12">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
+      <h3 class="text-2xl font-serif font-bold mb-4">自然に還る庭づくり</h3>
+      <p class="text-base mb-6 text-white/80">
+        庭仕舞いという選択 - ゆっくりと自然に帰す、これからの庭づくり
+      </p>
+      <div class="border-t border-white/20 pt-6">
+        <p class="text-sm text-white/60">
+          &copy; 2025 自然に還る庭づくり. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+    lucide.createIcons();
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      icon.setAttribute('data-lucide', isExpanded ? 'menu' : 'x');
+      mobileMenuButton.setAttribute('aria-label', isExpanded ? 'メニューを開く' : 'メニューを閉じる');
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
