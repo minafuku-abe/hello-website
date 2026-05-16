@@ -115,40 +115,11 @@
           </a>
         </div>
 
-        <!-- デスクトップメニュー -->
-        <div class="hidden lg:flex space-x-8">
+        <!-- メニュー -->
+        <div class="flex space-x-6">
           <a href="#hero" class="nav-link text-white hover:opacity-80 transition">ホーム</a>
-          <a href="#concept" class="nav-link text-white hover:opacity-80 transition">庭仕舞いとは</a>
-          <a href="#profile" class="nav-link text-white hover:opacity-80 transition">プロフィール</a>
-          <a href="#story" class="nav-link text-white hover:opacity-80 transition">庭の物語</a>
-          <a href="#practice" class="nav-link text-white hover:opacity-80 transition">実践例</a>
-          <a href="#seasons" class="nav-link text-white hover:opacity-80 transition">四季の庭</a>
           <a href="blog.html" class="nav-link text-white hover:opacity-80 transition">ブログ</a>
         </div>
-
-        <!-- モバイルメニューボタン -->
-        <button id="mobile-menu-button"
-                class="lg:hidden p-2"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-                aria-label="メニューを開く">
-          <i data-lucide="menu" class="w-6 h-6 text-white"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- モバイルメニュー -->
-    <div id="mobile-menu"
-         class="hidden lg:hidden bg-white shadow-lg"
-         role="navigation">
-      <div class="px-4 py-4 space-y-3">
-        <a href="#hero" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">ホーム</a>
-        <a href="#concept" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭仕舞いとは</a>
-        <a href="#profile" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">プロフィール</a>
-        <a href="#story" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭の物語</a>
-        <a href="#practice" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">実践例</a>
-        <a href="#seasons" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">四季の庭</a>
-        <a href="blog.html" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">ブログ</a>
       </div>
     </div>
   </nav>
@@ -158,36 +129,36 @@
     <section id="hero" class="relative h-screen flex items-center justify-center">
       <!-- 背景画像（ユーザー提供の庭の写真を使用） -->
       <div class="absolute inset-0 bg-forest">
-        <img src="assets/images/placeholder-hero.svg"
+        <img src="assets/images/IMG_0003.jpeg"
              alt="雑木の庭"
              class="w-full h-full object-cover opacity-90"
              loading="eager">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-black/20"></div>
       </div>
 
       <!-- コンテンツ -->
       <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div class="rounded-2xl px-10 py-12" style="background-color: rgba(30, 36, 25, 0.82)">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
+        <div class="rounded-2xl px-10 py-12" style="background-color: rgba(252, 248, 240, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="color: #1e2419;"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200">
           庭仕舞いの愉しみ
         </h1>
 
-        <p class="text-2xl md:text-3xl lg:text-3xl mb-8 font-bold font-serif" style="color: #d4c4b0;"
+        <p class="text-2xl md:text-3xl lg:text-3xl mb-8 font-bold font-serif" style="color: #3a5a3b;"
            data-aos="fade-up"
            data-aos-duration="1000"
            data-aos-delay="400">
-          ゆっくりと自然に還す、これからの庭づくり
+          ゆっくりと、自然に還す庭へ。
         </p>
 
-        <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-serif" style="color: #c8bfb0;"
+        <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-serif" style="color: #4a4a3a;"
            data-aos="fade-up"
            data-aos-duration="1000"
            data-aos-delay="600">
-          50年以上の園芸経験から辿りついた、庭との新たな向き合い方。<br>
-          里山の庭で取り組む、自然に還す庭作りの記録です。
+          50年の経験が辿り着いた、引き算の庭づくり。<br>
+          里山に隣接する庭から、その記録を綴ります。
         </p>
         </div>
 
@@ -212,30 +183,24 @@
         </h2>
 
         <div class="mb-16 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-          <img src="assets/images/placeholder.svg"
-               alt="自然に還る庭"
-               class="float-right ml-8 mb-4 w-48 md:w-64 h-auto rounded-lg shadow-md"
-               loading="lazy"
-               decoding="async">
+          <h3 class="text-xl md:text-2xl font-bold font-serif mb-6 text-forest">自然に還る庭</h3>
 
           <p class="text-base md:text-lg leading-relaxed mb-6">
-            庭仕舞い――それは、人生の後半戦において、庭との関わり方を見直す選択です。
-            若い頃は手入れを楽しめた庭も、年齢を重ねるにつれ、負担になることがあります。
+            庭仕舞い――それは、庭との関わり方を見直す選択です。
           </p>
 
           <p class="text-base md:text-lg leading-relaxed mb-6">
-            たとえばアーチの薔薇の剪定。壁に這わせたクレマチスの誘引。高所の作業は時に危険も伴います。
+            アーチの薔薇、壁面のクレマチス。年齢とともに、その手入れが少しずつ遠くなっていきました。
           </p>
 
           <p class="text-base md:text-lg leading-relaxed">
-            庭を里山の自然に還す――そんな発想で、庭との向き合い方を見直すことにしました。無理をせず、今の体に合った作業を選びながら、これからも長くこの庭と付き合っていく。それが、私の見つけた答えです。
+            無理をせず、自然に委ねる。それが里山に隣接するこの庭で、私が辿り着いた答えです。
           </p>
-          <div class="clear-both"></div>
         </div>
 
         <!-- 庭づくりの方針セクション -->
         <div class="mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="800">
-          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-forest">手放すことで、庭は豊かになる</h3>
+          <h3 class="text-xl md:text-2xl font-bold mb-6 text-forest">手放すことで、庭は豊かになる</h3>
 
           <img src="assets/images/placeholder.svg"
                alt="山野草と雑木の庭"
@@ -244,12 +209,11 @@
                decoding="async">
 
           <p class="text-base md:text-lg leading-relaxed mb-6">
-            手間のかかる園芸種を減らし、自生する山野草や雑木を主役に。仕立て方を変えて、自然な形へ。手放すことで、かえって庭に静かな豊かさが生まれてきました。
+            手間のかかる園芸種を減らし、山野草と雑木を主役に。手放すことで、庭に静かな豊かさが生まれました。
           </p>
 
-          <h4 class="text-xl md:text-2xl font-bold mb-3 text-forest">人の手が少なくても美しく</h4>
           <p class="text-base md:text-lg leading-relaxed">
-            春の芽吹き、夏の緑陰、秋の紅葉、冬の枯れ枝の線。その有りのままの姿が最も美しく、最も逞しかったのです。管理を少しだけ自然に委ねてみると、庭で過ごす時間に穏やかな余白も生まれました。
+            春の芽吹き、夏の緑陰、秋の紅葉、冬の枯れ枝。有りのままの姿が、最も美しかった。
           </p>
           <div class="clear-both"></div>
         </div>
@@ -258,11 +222,15 @@
           <h3 class="text-2xl md:text-3xl font-bold mb-6 text-primary">なぜ、雑木の庭なのか</h3>
 
           <p class="text-base md:text-lg leading-relaxed mb-4">
-            お手本はすぐ目の前にありました。隣接する里山です。手入れをしなくても、春には山桜が咲き、夏には青々とした木陰が広がり、秋には錦のような紅葉が山を彩る。その豊かさの秘密は、自然の草木がそのまま息づいていることでした。
+            お手本は、すぐ目の前にありました。隣接する里山です。手入れをしなくても、春には山桜が咲き、夏には木陰が広がり、秋には錦の紅葉が山を彩る。
+          </p>
+
+          <p class="text-base md:text-lg leading-relaxed mb-4">
+            落ち葉は土に還り、種は風に運ばれ、光と水だけで命が循環する。
           </p>
 
           <p class="text-base md:text-lg leading-relaxed">
-            落ち葉は土に還り、種は風に運ばれ、光と水だけで命が循環する。この庭も、その自然のしくみに寄り添えばいい。それに気づいたとき、雑木の庭という選択が自然と見えてきました。
+            管理を少しだけ自然に委ねる。この庭も、そのしくみに寄り添えばいい。そう気づいたとき、雑木の庭という選択が見えてきました。
           </p>
         </div>
       </div>
@@ -287,7 +255,7 @@
                 </div>
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">荒地との格闘</h3>
                 <p class="text-base md:text-lg leading-relaxed">
-                  新築工事で敷いた砂の下は、硬い粘土の層。シャベルに足をかけて踏み込んでも、やっと10cm。掘り進むと大きな石が次々と出てきました。集めて並べたら、ロックガーデンができるほどの量でした。
+                  この土地は硬い粘土の層で、大きな石がゴロゴロ入っていました。深さ10cmの穴を１つ掘るのにもシャベルを何回も踏み込みました。掘り出した石を集めたら、ロックガーデンができるほどの量でした。
                 </p>
               </div>
               <div class="md:w-1/2">
@@ -309,8 +277,7 @@
                 </div>
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">花々で彩る日々</h3>
                 <p class="text-base md:text-lg leading-relaxed">
-                  バラ、クレマチス、宿根草…色とりどりの植物を集めました。
-                  毎日の水やり、剪定、病害虫対策。忙しくも充実した時間でした。
+                  バラ、クレマチス、宿根草。毎日の水やり、剪定、病害虫対策。忙しくも、充実した時間でした。
                 </p>
               </div>
               <div class="md:w-1/2">
@@ -330,10 +297,9 @@
                 <div class="bg-forest text-white inline-block px-4 py-2 rounded-full mb-4 font-bold">
                   第3段階
                 </div>
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">自然への回帰</h3>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">転換点</h3>
                 <p class="text-base md:text-lg leading-relaxed">
-                  体力の限界を感じ始めた頃、ふと山を見上げました。
-                  人の手が入らなくても美しい雑木林。そこにヒントがありました。
+                  体力の限界を感じた頃、ふと山を見上げました。人の手が入らなくても美しい雑木林。そこに、答えがありました。
                 </p>
               </div>
               <div class="md:w-1/2">
@@ -356,7 +322,7 @@
                 </div>
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 text-primary">雑木の庭へ</h3>
                 <p class="text-base md:text-lg leading-relaxed">
-                  10数年かけてバラや花を譲りながら、雑木と葉物へ植え替えていきました。両親から継いだ庭木や山野草が加わると、庭は一気に豊かになりました。自然の息づかいに寄り添う――それが私の「庭仕舞い」です。
+                  10数年かけてバラや花を譲り、雑木と葉物へ植え替えていきました。両親から継いだ庭木や山野草が加わり、庭は一気に豊かになりました。自然の息づかいに寄り添う庭仕事――それが私の「庭仕舞い」です。
                 </p>
               </div>
               <div class="md:w-1/2">
@@ -394,7 +360,7 @@
             </div>
             <h3 class="text-xl md:text-2xl font-bold mb-3 text-primary">新品種を追うこと</h3>
             <p class="text-base leading-relaxed">
-              庭に植えるのは両親、知人から継いだ植物と、もともと植えてある原種、古典品種だけにしました。
+              植えるのは、両親や知人から継いだ植物と、原種・古典品種をメインにしました。
             </p>
           </div>
 
@@ -410,9 +376,9 @@
                    loading="lazy"
                    decoding="async">
             </div>
-            <h3 class="text-xl md:text-2xl font-bold mb-3 text-primary">「不燃物」の買い足し</h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-3 text-primary">支柱と鉢の買い増し</h3>
             <p class="text-base leading-relaxed">
-              支柱や植え込みの仕切りは剪定した枝や廃材の竹を利用。プラスチックや鉄製の園芸用品は極力買い足さないようにしています。
+              支柱や仕切りは、剪定枝や廃材の竹で代用。買い足さない選択が、庭をすっきりさせました。
             </p>
           </div>
 
@@ -430,7 +396,7 @@
             </div>
             <h3 class="text-xl md:text-2xl font-bold mb-3 text-primary">アーチと壁面仕立て</h3>
             <p class="text-base leading-relaxed">
-              梯子を使う剪定や誘引を減らすために、植える場所を変えて低く仕立てました。
+              梯子を使う作業を減らすために、植える場所を変えて低く仕立てました。
             </p>
           </div>
         </div>
@@ -442,28 +408,11 @@
       <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-forest"
             data-aos="fade-up">
-          50年の経験から生まれた工夫
+          還し、返され
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- アイディア1 -->
-          <div class="bg-bg-light p-6 rounded-lg"
-               data-aos="zoom-in-up"
-               data-aos-duration="600">
-            <div class="mb-4">
-              <i data-lucide="droplets" class="w-12 h-12 text-primary mb-4"></i>
-              <img src="assets/images/placeholder.svg"
-                   alt="雨水の活用"
-                   class="w-full h-40 object-cover rounded-lg"
-                   loading="lazy"
-                   decoding="async">
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-primary">雨水の活用</h3>
-            <p class="text-base leading-relaxed">
-              雨水タンクを設置し、水やりに活用。自然の恵みを無駄にしません。
-            </p>
-          </div>
-
           <!-- アイディア2 -->
           <div class="bg-bg-light p-6 rounded-lg"
                data-aos="zoom-in-up"
@@ -540,24 +489,6 @@
             </p>
           </div>
 
-          <!-- アイディア6 -->
-          <div class="bg-bg-light p-6 rounded-lg"
-               data-aos="zoom-in-up"
-               data-aos-duration="600"
-               data-aos-delay="500">
-            <div class="mb-4">
-              <i data-lucide="bird" class="w-12 h-12 text-primary mb-4"></i>
-              <img src="assets/images/placeholder.svg"
-                   alt="野鳥との共生"
-                   class="w-full h-40 object-cover rounded-lg"
-                   loading="lazy"
-                   decoding="async">
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-primary">野鳥との共生</h3>
-            <p class="text-base leading-relaxed">
-              餌台や水場を設置し、野鳥を呼び込む。自然な害虫対策にも。
-            </p>
-          </div>
         </div>
       </div>
     </section>
@@ -991,44 +922,6 @@
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // モバイルメニューの開閉
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-
-      // aria-expanded切り替え
-      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-
-      // メニュー表示切り替え
-      mobileMenu.classList.toggle('hidden');
-
-      // アイコン切り替え（Lucide）
-      const icon = mobileMenuButton.querySelector('i');
-      if (isExpanded) {
-        icon.setAttribute('data-lucide', 'menu');
-        mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
-      } else {
-        icon.setAttribute('data-lucide', 'x');
-        mobileMenuButton.setAttribute('aria-label', 'メニューを閉じる');
-      }
-
-      // Lucideアイコン再レンダリング
-      lucide.createIcons();
-    });
-
-    // メニューリンククリック時に閉じる
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        const icon = mobileMenuButton.querySelector('i');
-        icon.setAttribute('data-lucide', 'menu');
-        mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
-        lucide.createIcons();
-      });
-    });
 
     // スムーススクロール
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
