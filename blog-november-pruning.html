@@ -48,6 +48,12 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-serif);
     }
+    #main-nav {
+      background: rgba(250, 249, 245, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
     .nav-link {
       transition: color 0.3s ease, opacity 0.3s ease;
     }
@@ -86,45 +92,22 @@
 <body class="bg-bg-light">
 
   <!-- ナビゲーション -->
-  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-bg-light/95 shadow-sm backdrop-filter backdrop-blur-sm" aria-label="メインナビゲーション">
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" aria-label="メインナビゲーション">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
 
         <div class="flex-shrink-0">
-          <a href="index.html" class="text-xl lg:text-2xl font-serif font-bold nav-link text-forest">
+          <a href="index.html" class="text-xl lg:text-2xl font-serif font-bold nav-link text-primary">
             自然に還る庭づくり
           </a>
         </div>
 
-        <div class="hidden lg:flex space-x-8">
-          <a href="index.html#hero" class="nav-link text-primary hover:opacity-70 transition">ホーム</a>
-          <a href="index.html#concept" class="nav-link text-primary hover:opacity-70 transition">庭仕舞いとは</a>
-          <a href="index.html#profile" class="nav-link text-primary hover:opacity-70 transition">プロフィール</a>
-          <a href="index.html#story" class="nav-link text-primary hover:opacity-70 transition">庭の物語</a>
-          <a href="index.html#practice" class="nav-link text-primary hover:opacity-70 transition">実践例</a>
-          <a href="index.html#seasons" class="nav-link text-primary hover:opacity-70 transition">四季の庭</a>
-          <a href="blog.html" class="nav-link text-primary font-bold border-b-2 border-primary pb-0.5">ブログ</a>
+        <div class="flex space-x-6">
+          <a href="index.html" class="nav-link text-primary hover:opacity-80 transition">ホーム</a>
+          <a href="plants.html" class="nav-link text-primary hover:opacity-80 transition">植物一覧</a>
+          <a href="seasons.html" class="nav-link text-primary hover:opacity-80 transition">季節の庭仕事</a>
+          <a href="blog.html" class="nav-link text-primary font-bold hover:opacity-80 transition">ブログ</a>
         </div>
-
-        <button id="mobile-menu-button"
-                class="lg:hidden p-2"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-                aria-label="メニューを開く">
-          <i data-lucide="menu" class="w-6 h-6 text-primary"></i>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg" role="navigation">
-      <div class="px-4 py-4 space-y-3">
-        <a href="index.html#hero" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">ホーム</a>
-        <a href="index.html#concept" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭仕舞いとは</a>
-        <a href="index.html#profile" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">プロフィール</a>
-        <a href="index.html#story" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">庭の物語</a>
-        <a href="index.html#practice" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">実践例</a>
-        <a href="index.html#seasons" class="block text-primary hover:bg-sand/20 px-4 py-2 rounded transition">四季の庭</a>
-        <a href="blog.html" class="block text-primary font-bold bg-sand/30 px-4 py-2 rounded transition">ブログ</a>
       </div>
     </div>
   </nav>
