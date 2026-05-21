@@ -69,6 +69,53 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* ハンバーガーメニュー（320px以下） */
+    .hamburger-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+    .hamburger-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 249, 245, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .mobile-menu.is-open {
+      display: flex;
+    }
+    @media (max-width: 480px) {
+      .desktop-menu {
+        display: none !important;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body class="bg-bg-light">
@@ -86,13 +133,28 @@
         </div>
 
         <!-- メニュー -->
-        <div class="flex space-x-6">
+        <div class="desktop-menu flex space-x-6">
           <a href="index.html" class="nav-link text-primary hover:opacity-80 transition">ホーム</a>
           <a href="plants.html" class="nav-link text-primary font-bold hover:opacity-80 transition">植物一覧</a>
           <a href="seasons.html" class="nav-link text-primary hover:opacity-80 transition">季節の庭仕事</a>
           <a href="blog.html" class="nav-link text-primary hover:opacity-80 transition">ブログ</a>
         </div>
+
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger-btn text-primary" id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
+    </div>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="モバイルナビゲーション">
+      <a href="index.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">ホーム</a>
+      <a href="plants.html" class="px-6 py-3 text-primary font-bold hover:bg-bg-light transition block">植物一覧</a>
+      <a href="seasons.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">季節の庭仕事</a>
+      <a href="blog.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">ブログ</a>
     </div>
   </nav>
 
@@ -232,6 +294,20 @@
     });
 
     lucide.createIcons();
+
+    // ハンバーガーメニュー
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        const isOpen = hamburgerBtn.classList.contains('is-open');
+        hamburgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', String(!isOpen));
+        hamburgerBtn.setAttribute('aria-label', isOpen ? 'メニューを開く' : 'メニューを閉じる');
+      });
+    }
 
     // 目次リンク：固定ナビ分オフセットしてスクロール
     document.querySelectorAll('a[href^="#cat-"]').forEach(anchor => {
