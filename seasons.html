@@ -50,6 +50,8 @@
       color: var(--color-text-primary);
       font-size: 121%;
       line-height: 1.65;
+      /* AOSのfade-left/right初期transformでカードが画面外に出た際の横スクロールを防止 */
+      overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -304,7 +306,7 @@
         </div>
 
         <!-- 初夏（左） -->
-        <div style="position:relative; padding:0 0 56px">
+        <div style="position:relative; padding:0">
           <div data-aos="fade-right" class="trail-card trail-card--left"
                style="background:rgba(122,168,106,0.13); border-radius:12px; padding:24px 22px 22px; box-shadow:0 2px 14px rgba(0,0,0,0.06)">
             <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:10px; display:block">
@@ -327,6 +329,135 @@
               <li>つるバラ弱剪定・シュート誘引</li>
               <li>クレマチス(新枝咲)切り戻し剪定</li>
               <li style="font-size:14px; color:#7a9161; margin-top:4px">菜園：収穫・バジル切り戻し挿し木</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ギャップ：画像（右） -->
+        <div class="gap-row">
+          <img src="assets/images/placeholder.svg" alt=""
+               data-aos="fade-in" data-aos-delay="150"
+               class="gap-img gap-img--right"
+               style="width:150px; height:105px; object-fit:cover; border-radius:8px; opacity:0.85">
+        </div>
+
+        <!-- 盛夏（右） -->
+        <div style="position:relative; padding:0">
+          <div data-aos="fade-left" class="trail-card trail-card--right"
+               style="background:rgba(107,157,90,0.13); border-radius:12px; padding:24px 22px 22px; box-shadow:0 2px 14px rgba(0,0,0,0.06)">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:10px; display:block">
+              <circle cx="22" cy="20" r="15" fill="#6b9d5a"/>
+              <line x1="22" y1="9" x2="22" y2="35" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="22" y1="16" x2="16" y2="12" stroke="white" stroke-width="1.3" opacity="0.85" stroke-linecap="round"/>
+              <line x1="22" y1="16" x2="28" y2="12" stroke="white" stroke-width="1.3" opacity="0.85" stroke-linecap="round"/>
+              <line x1="22" y1="24" x2="15" y2="28" stroke="white" stroke-width="1.3" opacity="0.85" stroke-linecap="round"/>
+              <line x1="22" y1="24" x2="29" y2="28" stroke="white" stroke-width="1.3" opacity="0.85" stroke-linecap="round"/>
+            </svg>
+            <h2 style="font-family:'Noto Serif JP',serif; font-size:19px; font-weight:700; color:#2d3319; margin:0 0 2px">盛夏</h2>
+            <p style="font-size:15px; color:#7a9161; margin:0 0 14px; line-height:1.5">7〜8月</p>
+            <ul style="font-size:15px; line-height:2.1; color:#2d3319; list-style:none; padding:0; margin:0">
+              <li>雑草とり</li>
+              <li>花がら摘み</li>
+              <li>病害虫対策</li>
+              <li>夏越し対策</li>
+              <li>ヤマアジサイ剪定(7月初旬)</li>
+              <li style="font-size:14px; color:#7a9161; margin-top:4px">菜園：収穫・イタリアンパセリ種取り</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ギャップ：画像（左） -->
+        <div class="gap-row">
+          <img src="assets/images/placeholder.svg" alt=""
+               data-aos="fade-in" data-aos-delay="150"
+               class="gap-img gap-img--left"
+               style="width:150px; height:105px; object-fit:cover; border-radius:8px; opacity:0.85">
+        </div>
+
+        <!-- 初秋（左） -->
+        <div style="position:relative; padding:0">
+          <div data-aos="fade-right" class="trail-card trail-card--left"
+               style="background:rgba(224,176,80,0.13); border-radius:12px; padding:24px 22px 22px; box-shadow:0 2px 14px rgba(0,0,0,0.06)">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:10px; display:block">
+              <path d="M22 38 C8 35 4 20 9 9 C14 16 19 17 22 11 C25 17 30 16 35 9 C40 20 36 35 22 38 Z" fill="#e0b050"/>
+              <line x1="22" y1="38" x2="22" y2="42" stroke="#e0b050" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="34" x2="13" y2="13" stroke="white" stroke-width="0.9" opacity="0.8"/>
+              <line x1="22" y1="34" x2="22" y2="12" stroke="white" stroke-width="0.9" opacity="0.8"/>
+              <line x1="22" y1="34" x2="31" y2="13" stroke="white" stroke-width="0.9" opacity="0.8"/>
+            </svg>
+            <h2 style="font-family:'Noto Serif JP',serif; font-size:19px; font-weight:700; color:#2d3319; margin:0 0 2px">初秋</h2>
+            <p style="font-size:15px; color:#7a9161; margin:0 0 14px; line-height:1.5">9〜10月</p>
+            <ul style="font-size:15px; line-height:2.1; color:#2d3319; list-style:none; padding:0; margin:0">
+              <li>雑草とり</li>
+              <li>花がら摘み</li>
+              <li>病害虫対策</li>
+              <li>日除け外し</li>
+              <li>堆肥の切り返し</li>
+              <li>株分け・移植</li>
+              <li style="font-size:14px; color:#7a9161; margin-top:4px">菜園：収穫・秋苗の植え付け</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ギャップ：画像（右） -->
+        <div class="gap-row">
+          <img src="assets/images/placeholder.svg" alt=""
+               data-aos="fade-in" data-aos-delay="150"
+               class="gap-img gap-img--right"
+               style="width:150px; height:105px; object-fit:cover; border-radius:8px; opacity:0.85">
+        </div>
+
+        <!-- 晩秋（右） -->
+        <div style="position:relative; padding:0">
+          <div data-aos="fade-left" class="trail-card trail-card--right"
+               style="background:rgba(196,122,74,0.13); border-radius:12px; padding:24px 22px 22px; box-shadow:0 2px 14px rgba(0,0,0,0.06)">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:10px; display:block">
+              <path d="M14 20 C14 32 18 40 22 40 C26 40 30 32 30 20 Z" fill="#c47a4a"/>
+              <path d="M12 20 C12 12 16 8 22 8 C28 8 32 12 32 20 C28 17 16 17 12 20 Z" fill="#8a5a3a"/>
+              <line x1="22" y1="8" x2="22" y2="4" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="24" x2="22" y2="35" stroke="white" stroke-width="1.1" opacity="0.7"/>
+            </svg>
+            <h2 style="font-family:'Noto Serif JP',serif; font-size:19px; font-weight:700; color:#2d3319; margin:0 0 2px">晩秋</h2>
+            <p style="font-size:15px; color:#7a9161; margin:0 0 14px; line-height:1.5">11月</p>
+            <ul style="font-size:15px; line-height:2.1; color:#2d3319; list-style:none; padding:0; margin:0">
+              <li>冬支度</li>
+              <li>園路・支柱・フェンスの整備</li>
+              <li>枯れ草掃除</li>
+              <li>堆肥すき込み</li>
+              <li>腐葉土・籾がらマルチング</li>
+              <li>クレマチス(新枝咲)強剪定・誘引外し</li>
+              <li>落葉樹の剪定</li>
+              <li style="font-size:14px; color:#7a9161; margin-top:4px">菜園：収穫・掃除</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ギャップ：画像（左） -->
+        <div class="gap-row">
+          <img src="assets/images/placeholder.svg" alt=""
+               data-aos="fade-in" data-aos-delay="150"
+               class="gap-img gap-img--left"
+               style="width:150px; height:105px; object-fit:cover; border-radius:8px; opacity:0.85">
+        </div>
+
+        <!-- 冬（左） -->
+        <div style="position:relative; padding:0 0 56px">
+          <div data-aos="fade-right" class="trail-card trail-card--left"
+               style="background:rgba(154,160,170,0.13); border-radius:12px; padding:24px 22px 22px; box-shadow:0 2px 14px rgba(0,0,0,0.06)">
+            <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:10px; display:block">
+              <path d="M22 4 L30 16 L26 16 L34 27 L29 27 L37 39 L7 39 L15 27 L10 27 L18 16 L14 16 Z" fill="#9aa0aa"/>
+              <line x1="22" y1="39" x2="22" y2="42" stroke="#9aa0aa" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="22" x2="13" y2="26" stroke="white" stroke-width="1" opacity="0.8"/>
+              <line x1="22" y1="22" x2="31" y2="26" stroke="white" stroke-width="1" opacity="0.8"/>
+              <line x1="22" y1="33" x2="11" y2="37" stroke="white" stroke-width="1" opacity="0.8"/>
+              <line x1="22" y1="33" x2="33" y2="37" stroke="white" stroke-width="1" opacity="0.8"/>
+            </svg>
+            <h2 style="font-family:'Noto Serif JP',serif; font-size:19px; font-weight:700; color:#2d3319; margin:0 0 2px">冬</h2>
+            <p style="font-size:15px; color:#7a9161; margin:0 0 14px; line-height:1.5">12〜2月</p>
+            <ul style="font-size:15px; line-height:2.1; color:#2d3319; list-style:none; padding:0; margin:0">
+              <li>霜・積雪対策</li>
+              <li>来年の計画</li>
+              <li>バラの強剪定・誘引</li>
             </ul>
           </div>
         </div>
@@ -387,7 +518,7 @@
       });
     }
 
-    // 蛇行パスをJSで描画（左右左パターン）
+    // 蛇行パスをJSで描画（左右交互パターン）
     function drawSeasonTrail() {
       const wrapper = document.getElementById('trail-wrapper');
       const pathEl  = document.getElementById('trail-curve');
@@ -396,7 +527,7 @@
       const H  = wrapper.offsetHeight;
       const cx = W / 2;
       const amp = 26;
-      const numSeasons = 3;
+      const numSeasons = 7;
       const steps = 300;
       const pts = [];
       for (let i = 0; i <= steps; i++) {
