@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>木陰の光 - 自然に還す庭づくり</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta name="description" content="5月から6月、雑木の庭で変わっていく光と影。ホスタやバラ、ヤマアジサイなど、季節の植物とともに木陰の表情をたどる記録。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #5a6f4d;
+      --color-secondary: #8b7355;
+      --color-accent: #9aaa8e;
+      --color-earth: #a89079;
+      --color-forest: #3d4a34;
+      --color-sand: #d4c4b0;
+      --color-moss: #7a9161;
+      --color-stone: #8a8378;
+      --color-text-primary: #2d3319;
+      --color-text-secondary: #5a5a4a;
+      --color-text-light: #f5f5f0;
+      --color-bg-light: #faf9f5;
+      --color-bg-white: #ffffff;
+      --color-bg-dark: #3d4a34;
+      --font-sans: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+      --font-serif: 'Noto Serif JP', serif;
+    }
+  </style>
+
+  <style>
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text-primary);
+      font-size: 121%;
+      line-height: 1.65;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+    }
+    #main-nav {
+      background: rgba(250, 249, 245, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .nav-link {
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ハンバーガーメニュー（480px以下） */
+    .hamburger-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+    .hamburger-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-btn.is-open .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(250, 249, 245, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .mobile-menu.is-open {
+      display: flex;
+    }
+    @media (max-width: 640px) {
+      .desktop-menu {
+        display: none !important;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+    }
+    .prose-body p {
+      margin-bottom: 1.5rem;
+    }
+    .prose-body h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3d4a34;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #d4c4b0;
+    }
+    .prose-body h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #5a6f4d;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .prose-body ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .prose-body ul li {
+      margin-bottom: 0.4rem;
+    }
+    .prose-body ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .prose-body ol li {
+      margin-bottom: 0.4rem;
+    }
+    .prose-body hr {
+      border: none;
+      border-top: 1px solid #d4c4b0;
+      margin: 2.5rem 0;
+    }
+    .prose-body figure {
+      margin: 1.75rem 0;
+    }
+    .prose-body figcaption {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #5a5a4a;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-bg-light">
+
+  <!-- ナビゲーション -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" aria-label="メインナビゲーション">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-xl lg:text-2xl font-serif font-bold nav-link text-primary">
+            自然に還す庭づくり
+          </a>
+        </div>
+
+        <div class="desktop-menu flex space-x-6">
+          <a href="index.html" class="nav-link text-primary hover:opacity-80 transition">ホーム</a>
+          <a href="plants.html" class="nav-link text-primary hover:opacity-80 transition">植物一覧</a>
+          <a href="seasons.html" class="nav-link text-primary hover:opacity-80 transition">季節の庭仕事</a>
+          <a href="blog.html" class="nav-link text-primary font-bold hover:opacity-80 transition">ブログ</a>
+        </div>
+
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger-btn text-primary" id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="モバイルナビゲーション">
+      <a href="index.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">ホーム</a>
+      <a href="plants.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">植物一覧</a>
+      <a href="seasons.html" class="px-6 py-3 text-primary hover:bg-bg-light transition block">季節の庭仕事</a>
+      <a href="blog.html" class="px-6 py-3 text-primary font-bold hover:bg-bg-light transition block">ブログ</a>
+    </div>
+  </nav>
+
+  <main class="pt-16 lg:pt-20">
+
+    <!-- 記事ヘッダー -->
+    <section class="bg-white border-b border-sand">
+      <div class="container mx-auto px-4 lg:px-8 max-w-3xl py-12 md:py-16">
+
+        <!-- パンくず -->
+        <nav class="flex items-center gap-2 text-sm text-text-secondary mb-6" aria-label="パンくずリスト">
+          <a href="index.html" class="hover:text-primary transition-colors">ホーム</a>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          <a href="blog.html" class="hover:text-primary transition-colors">ブログ</a>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          <span class="text-text-primary">木陰の光</span>
+        </nav>
+
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xs text-white bg-primary rounded-full px-3 py-1 font-sans">今を愉しむ</span>
+          <time class="text-sm text-text-secondary" datetime="2026-06-11">2026年6月11日</time>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-forest leading-tight mb-6" data-aos="fade-up">
+          木陰の光
+        </h1>
+
+        <p class="text-xl text-text-secondary leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          5月から6月、雑木の庭の光が、少しずつ変わっていきます。庭を歩くと、足元の影も、頭上の葉も、季節とともに違う表情を見せます。
+        </p>
+      </div>
+    </section>
+
+    <!-- アイキャッチ画像 -->
+    <div class="bg-white">
+      <div class="container mx-auto px-4 lg:px-8 max-w-3xl">
+        <img src="assets/images/IMG_51.0010.3.jpeg"
+             alt="雑木の庭に差し込む木陰の光"
+             class="w-full max-h-96 object-cover rounded-b-xl shadow-md"
+             loading="eager">
+      </div>
+    </div>
+
+    <!-- 記事本文 -->
+    <article class="py-12 md:py-16">
+      <div class="container mx-auto px-4 lg:px-8 max-w-3xl">
+        <div class="bg-white rounded-xl shadow-sm p-6 md:p-10 prose-body" data-aos="fade-up">
+
+          <hr>
+
+          <h3>春、葉が広がり始める頃</h3>
+
+          <p>
+            5月初旬。葉物が姿を見せ始めます。ホスタの青みがかった葉、シダの透ける緑、足元のグラウンドカバー。どの葉も一斉に手を伸ばして、待ちわびた温かい光を受けとめます。
+          </p>
+
+          <figure>
+            <img src="assets/images/IMG_14.0001.jpeg"
+                 alt="若葉が広がるホスタやタガネソウ、ショウマなどの株元"
+                 class="w-full rounded-lg shadow-sm"
+                 loading="lazy">
+            <figcaption>ホスタ、タガネソウ、ショウマ他</figcaption>
+          </figure>
+
+          <h3>薔薇の季節</h3>
+
+          <p>
+            5月下旬。園路に葉影が長く伸びて、光と影のコントラストが見え始める季節。雑木の足元では、白バラが盛りを迎えています。
+          </p>
+
+          <figure>
+            <img src="assets/images/IMG_15.0005.jpeg"
+                 alt="白バラと足元に広がるホスタ、ツワブキ、イカリソウ"
+                 class="w-full rounded-lg shadow-sm"
+                 loading="lazy">
+            <figcaption>ホスタ、ツワブキ、イカリソウ他</figcaption>
+          </figure>
+
+          <p>
+            近づくと、薄紫のイチハツがバラの足元に色を添えています。緑の絨毯の上で、ここだけ特別に明るく感じます。「白」は、木陰に光を集めてくれる色。様々な色を繋いでくれる、まとめ役のような色です。
+          </p>
+
+          <figure>
+            <img src="assets/images/IMG_14.0003.jpeg"
+                 alt="白バラの足元に咲く斑入りイチハツとアジュガ"
+                 class="w-full rounded-lg shadow-sm"
+                 loading="lazy">
+            <figcaption>B系バラ、班入りイチハツ、アジュガ他</figcaption>
+          </figure>
+
+          <h3>ヤマアジサイの季節</h3>
+
+          <p>
+            6月上旬。雑木の葉がぐっと茂り、園路に濃い木陰が落ちます。庭のあちこちでは、ヤマアジサイが咲き始めます。小さな粒々の花と裾飾りが、たおやかな茎の上で揺れています。
+          </p>
+
+          <figure>
+            <img src="assets/images/IMG_2026.06.11.jpeg"
+                 alt="咲き始めたヤマアジサイ、美方八重や藍姫など"
+                 class="w-full rounded-lg shadow-sm"
+                 loading="lazy">
+            <figcaption>美方八重、藍姫、久住の舞、他</figcaption>
+          </figure>
+
+          <p>
+            しゃがみ込んで紫のグラデーションを見ていると、体が解けていくような心地よさ。ふと庭の向こうへ視線を向けると、遠くに白く湿った空が見えます。梅雨は、もうすぐそこ。
+          </p>
+
+          <figure>
+            <img src="assets/images/IMG_14.0007.jpeg"
+                 alt="木陰の向こうに見える梅雨前の白い空"
+                 class="w-full rounded-lg shadow-sm"
+                 loading="lazy">
+            <figcaption>梅雨待ちの空</figcaption>
+          </figure>
+
+        </div>
+
+        <!-- 記事フッター -->
+        <div class="mt-10 pt-8 border-t border-sand flex items-center justify-between flex-wrap gap-4">
+          <a href="blog.html"
+             class="inline-flex items-center gap-2 text-primary hover:text-forest font-bold transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            ブログ一覧に戻る
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-forest text-white py-12">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
+      <h3 class="text-2xl font-serif font-bold mb-4">自然に還す庭づくり</h3>
+      <p class="text-base mb-6 text-white/80">
+        引き算の庭から、ゆるやかに。
+      </p>
+      <div class="border-t border-white/20 pt-6">
+        <p class="text-sm text-white/60">
+          &copy; 2025 自然に還す庭づくり. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+    lucide.createIcons();
+
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        const isOpen = hamburgerBtn.classList.contains('is-open');
+        hamburgerBtn.classList.toggle('is-open');
+        mobileMenu.classList.toggle('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', String(!isOpen));
+        hamburgerBtn.setAttribute('aria-label', isOpen ? 'メニューを開く' : 'メニューを閉じる');
+      });
+    }
+  </script>
+</body>
+</html>

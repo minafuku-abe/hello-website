@@ -1,0 +1,11 @@
+# 画像ファイルをClaude Codeの読み込み対象から完全に除外
+public/images/
+src/assets/
+assets/
+static/
+images/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.svg
